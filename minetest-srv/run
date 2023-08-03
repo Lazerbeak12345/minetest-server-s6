@@ -1,0 +1,9 @@
+#!/bin/execlineb -P
+fdmove -c 2 1 # make sure that stderr goes into the log pipe
+sudo -H -u minetest # leave root as early as possible
+envfile /etc/s6/config/minetest.conf
+importas -sCuD "/var/lib/minetest/.minetest/minetest.conf" MINETEST_CONF MINETEST_CONF
+# Artix doesn't come with any games
+importas -sCui MINETEST_GAMEID MINETEST_GAMEID
+importas -sCuD "world" MINETEST_WORLDNAME MINETEST_WORLDNAME
+/usr/bin/minetestserver --config ${MINETEST_CONF} --gameid ${MINETEST_GAMEID} --worldname ${MINETEST_WORLDNAME}

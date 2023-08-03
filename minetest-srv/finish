@@ -1,0 +1,2 @@
+#!/bin/execlineb -P
+if -t { test -d /var/run/minetest } rm -rf /var/run/minetest
