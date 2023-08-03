@@ -10,7 +10,7 @@ This repo will get you started in the meantime.
 2. The `minetest-env.conf` file must be renamed and moved to `/etc/s6/config/minetest.conf`
 3. Edit that file so `MINETEST_GAMEID` is set to a minetest game found in `/var/lib/minetest/.minetest/games`
 4. Mark both `run` files and `/etc/s6/adminsv/minetest-srv/finish` as executible.
-5. Make a simlink inside `/etc/s6/adminsv/minetest-srv/` pointing to `/var/lib/minetest/.minetest`
+5. Make a simlink inside `/etc/s6/adminsv/minetest-srv/` called `Working Dir` (with a space) pointing to `/var/lib/minetest/.minetest`
 6. Make an empty directory `/etc/s6/adminsv/minetest-srv/event/`
 7. Add the minetest service group to default so it runs on boot
 8. reload the s6 database
