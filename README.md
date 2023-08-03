@@ -2,7 +2,7 @@
 
 As of this time of writing, there isn't currently a minetest-server-s6 package in Artix's package repos.
 
-This gist will get you started in the meantime.
+This repo will get you started in the meantime.
 
 ## Install
 
