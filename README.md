@@ -23,5 +23,5 @@ To use postgresql the service must be installed, so be sure that `postgresql-s6`
 
 I won't tell you how to set up postgresql with minetest, but to ensure it starts before `minetest-srv` do this:
 
-1. `mkdir /etc/adminsv/minetest-srv/dependencies.d`
-2. `touch /etc/adminsv/minetest-srv/dependencies.d/postgresql`
+1. `mkdir /etc/s6/adminsv/minetest-srv/dependencies.d`
+2. `touch /etc/s6/adminsv/minetest-srv/dependencies.d/postgresql`
